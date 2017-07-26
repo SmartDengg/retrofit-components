@@ -4,6 +4,7 @@ import io.reactivex.Observable;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Function;
+import io.reactivex.internal.schedulers.ImmediateThinScheduler;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import smartdengg.retrofit2.utils.Utils;
@@ -42,7 +43,8 @@ final class RetryWhenHandler
           return Observable.error(throwableWrapper.getSourceThrowable());
         }
 
-        return Observable.timer((long) Math.pow(2, retryCount), TimeUnit.SECONDS);
+        return Observable.timer((long) Math.pow(2, retryCount), TimeUnit.SECONDS,
+            ImmediateThinScheduler.INSTANCE);
       }
     });
   }
