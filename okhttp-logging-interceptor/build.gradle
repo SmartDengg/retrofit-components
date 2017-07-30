@@ -3,6 +3,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.SmartDengg'
 
+buildscript {
+  dependencies {
+    classpath 'com.android.tools.build:gradle:2.3.3'
+  }
+}
+
 android {
   compileSdkVersion 25
   buildToolsVersion "25.0.3"
