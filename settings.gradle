@@ -1,5 +1,5 @@
 include ':retrofit2-adapter-httpcall', ':retrofit2-annotations', ':retrofit2-converters',
     ':retrofit2-adapter-rxjava2',
     ':retrofit2-adapter-rxjava',
-    ':retrofit2-utils',
-    ':okhttp-logging-interceptor'
+    ':retrofit2-utils'
+
