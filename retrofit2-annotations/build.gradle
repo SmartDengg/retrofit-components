@@ -1,5 +1,6 @@
 apply plugin: 'java'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven'
 
 group = 'com.github.SmartDengg'
 
